@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IIIT-D MUN</title>
+    <meta name="keywords" content="MUN,IIIT Delhi">
+    <meta name="author" content="@croft_lara">
+
+    
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+
+
+
+    <!-- Slider
+    ================================================== -->
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/set2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.2.0/css/font-awesome.min.css' %}" />
+
+    <!--forms-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/regfromdemo.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/linkstyles2.css' %}" />
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style> /* Firefox seems to have issues loading the clip path from inside the CSS */
+        .link--urpi::before {
+            -webkit-clip-path: url(#cp_up); 
+            clip-path: url(#cp_up);
+        }
+
+        .link--urpi::after {
+            -webkit-clip-path: url(#cp_down); 
+            clip-path: url(#cp_down);
+        }
+    </style>
+    
+  </head>
+  <body>
+    <!-- navigation 
+    ==========================================-->
+    <!--$(document).ready(function(){$("loader").fadeOut(2000);});-->
+    <div class="loader" style="display: none;"></div>
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">IIIT Delhi Mun</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+             <li><a href="#tf-home" class="page-scroll">Home</a></li>
+            <li><a href="#tf-about" class="page-scroll">About Us</a></li>
+            
+            
+            <li><a href="#tf-comm" class="page-scroll">Committees</a></li>
+            <li><a href="#tf-registrations" class="page-scroll">Registrations</a></li>
+            <li><a href="#tf-team" class="page-scroll">Who are we?</a></li>
+            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Home Page
+    ==========================================-->
+    <div id="tf-home" class="text-center">
+        <div class="overlay">
+            <div class="content">
+                <h1>IIIT Delhi <strong><span class="color">MUN 2017</span></strong></h1>
+                <p class="lead"> <strong>Viva </strong>Vidi <strong>Vici.</strong>
+                <br>
+                <span style="font-size:22px;">00<sup>th</sup> - 00<sup>th</sup> xxxxxxx 2017</span></p>
+                <span countdown="" date="January 26, 2017 12:00:00" class="ng-isolate-scope"></span><br>
+                <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Page
+    ==========================================-->
+    <div id="tf-about">
+        <div class="container">
+           <!-- <div class="row">
+                <div class="col-md-6">
+                    <img src="img/02.png" class="img-responsive">
+                </div>
+                <div class="col-md-6">-->
+                <section class="third-section _third-section">
+   <div class="wrapper no-top-padding lg">
+      <div class="row">
+         <div class="col-6of7 g-pull-right">
+            <div class="slider">
+               <div class="slide active">
+                  <blockquote>
+                  <center><h1>xxxxxxxxxxx</h1></center><div class="line"><hr></div><div class="clearfix"></div>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat nibh, rhoncus at leo nec, pretium congue est. Proin vehicula nec lorem quis vehicula. Aliquam iaculis metus at sem tristique accumsan. Integer semper sit amet lorem non fringilla. Praesent nibh magna, interdum sed porttitor non, tempor a diam. Suspendisse sed justo pulvinar, vulputate risus in, condimentum lacus. Aliquam pellentesque orci et nisl vestibulum, et blandit velit feugiat. Maecenas ac dolor lectus. Pellentesque suscipit pharetra erat molestie tincidunt. Curabitur lacinia nulla tincidunt lobortis ultrices. Ut interdum purus erat, id finibus nulla dapibus in. Maecenas ut tristique nulla. Suspendisse dignissim, ipsum eget molestie vehicula, felis risus faucibus augue, et efficitur est arcu et nisl. Proin imperdiet ex tristique est laoreet, in lacinia nibh ornare.
+
+                    Morbi at cursus elit. Maecenas tincidunt gravida ornare. Vivamus scelerisque a elit ac tincidunt. Integer pretium augue nisi, nec venenatis justo finibus egestas. Praesent lacinia, ligula rutrum aliquam aliquam, nisl nisi aliquet urna, vitae venenatis risus arcu ac quam. Sed blandit, nulla non facilisis pulvinar, nisi ante pulvinar nibh, sit amet ultricies ante nibh vitae justo. Aliquam cursus lorem sed est facilisis, sed rutrum sapien aliquam. Fusce vitae leo quam. Suspendisse potenti.
+
+                    Aliquam neque purus, pharetra non volutpat ac, euismod in mauris. Cras aliquam enim id tellus pulvinar auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo justo sit amet porttitor rutrum. Duis luctus fringilla vestibulum. Praesent hendrerit non ipsum sit amet tincidunt. Ut luctus elementum orci, sed suscipit leo placerat id. Morbi laoreet, sem ac vehicula venenatis, elit ex aliquet lacus, eu ultrices ex neque sed libero. Donec maximus massa porta enim fermentum porttitor. Vivamus tempor dignissim ultricies. Pellentesque aliquet, dui in interdum rhoncus, mi purus accumsan purus, ac porttitor lacus lacus in turpis. Quisque tincidunt tristique mauris quis cursus.
+                     <div class="caption">- Matt</div>
+                  </blockquote>
+               </div>
+               <div class="slide">
+                  <blockquote><center><h1>xxxxxxxxxxx</h1></center><div class="line"><hr></div><div class="clearfix"></div>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat nibh, rhoncus at leo nec, pretium congue est. Proin vehicula nec lorem quis vehicula. Aliquam iaculis metus at sem tristique accumsan. Integer semper sit amet lorem non fringilla. Praesent nibh magna, interdum sed porttitor non, tempor a diam. Suspendisse sed justo pulvinar, vulputate risus in, condimentum lacus. Aliquam pellentesque orci et nisl vestibulum, et blandit velit feugiat. Maecenas ac dolor lectus. Pellentesque suscipit pharetra erat molestie tincidunt. Curabitur lacinia nulla tincidunt lobortis ultrices. Ut interdum purus erat, id finibus nulla dapibus in. Maecenas ut tristique nulla. Suspendisse dignissim, ipsum eget molestie vehicula, felis risus faucibus augue, et efficitur est arcu et nisl. Proin imperdiet ex tristique est laoreet, in lacinia nibh ornare.
+
+                    Morbi at cursus elit. Maecenas tincidunt gravida ornare. Vivamus scelerisque a elit ac tincidunt. Integer pretium augue nisi, nec venenatis justo finibus egestas. Praesent lacinia, ligula rutrum aliquam aliquam, nisl nisi aliquet urna, vitae venenatis risus arcu ac quam. Sed blandit, nulla non facilisis pulvinar, nisi ante pulvinar nibh, sit amet ultricies ante nibh vitae justo. Aliquam cursus lorem sed est facilisis, sed rutrum sapien aliquam. Fusce vitae leo quam. Suspendisse potenti.
+
+                    Aliquam neque purus, pharetra non volutpat ac, euismod in mauris. Cras aliquam enim id tellus pulvinar auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo justo sit amet porttitor rutrum. Duis luctus fringilla vestibulum. Praesent hendrerit non ipsum sit amet tincidunt. Ut luctus elementum orci, sed suscipit leo placerat id. Morbi laoreet, sem ac vehicula venenatis, elit ex aliquet lacus, eu ultrices ex neque sed libero. Donec maximus massa porta enim fermentum porttitor. Vivamus tempor dignissim ultricies. Pellentesque aliquet, dui in interdum rhoncus, mi purus accumsan purus, ac porttitor lacus lacus in turpis. Quisque tincidunt tristique mauris quis cursus.
+                     <div class="caption">- Paul </div>
+                  </blockquote>
+               </div>
+               
+               <span class="slide-controls">
+               <a class="ion-ios-arrow-thin-left slideLeft"></a>
+               <a class="ion-ios-arrow-thin-right slideRight"></a>
+               </span>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+                    
+</div>
+</div>
+
+
+   
+
+    <!-- Committees Section
+    ==========================================-->
+    <div id="tf-comm">
+        <div class="container">
+         <!-- Container -->
+            <div class="section-title text-center center">
+                <h2>The <strong>Committees</strong></h2>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="clearfix"></div>
+                <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>
+                
+        <div class="grid">
+          <figure class="effect-hera">
+            <img src="{% static 'img/17.jpg' %}" alt="img17"/>
+            <figcaption>
+              <h2>Tender <span>Hera</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+                
+              </p>
+            </figcaption>     
+          </figure>
+          <figure class="effect-hera">
+            <img src="{% static 'img/25.jpg' %}" alt="img25"/>
+            <figcaption>
+              <h2>Tender <span>Hera</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+
+              </p>
+            </figcaption>     
+          </figure>
+          <figure class="effect-hera">
+            <img src="{% static 'img/25.jpg' %}" alt="img25"/>
+            <figcaption>
+              <h2>Tender <span>Hera</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+                
+              </p>
+            </figcaption>     
+          </figure>
+          <figure class="effect-hera">
+            <img src="{% static 'img/25.jpg' %}" alt="img25"/>
+            <figcaption>
+              <h2>Tender <span>Hera</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+               
+              </p>
+            </figcaption>     
+          </figure>
+          <br>
+        </div>
+            </div>
+            
+    <!-- Testimonials Section
+    ==========================================-->
+    
+    <div id="tf-registrations" class="text-center" style="background:gray" onmouseover="this.style.background='gray';">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                     <!--manko--><div class="grid__item color-8">
+                <a class="link link--manko" href="/register/"><br><br>Register <strong>Here.</strong> <span></span> <span></span></a>
+            </div>
+                    
+                        <div id="registrations" class="owl-carousel owl-theme">
+                            
+
+                           <!-- <div class="item">
+                                <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
+                                <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
+                            </div>
+
+                            <div class="item">
+                                <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
+                                <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
+                            </div>-->
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+    <!-- Team Page
+    ==========================================-->
+
+     <div id="tf-team" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title center">
+                    <h2>Meet <strong>our team</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+
+                <div id="team" class="owl-carousel owl-theme row">
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/01.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/02.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/03.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/04.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/04.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/01.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/02.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="{% static 'img/team/03.jpg' %}" alt="..." class="img-circle team-img">
+                            <div class="caption">
+                                <h3>Jenn Gwapa</h3>
+                                <p>CEO / Founder</p>
+                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Section
+    ==========================================-->
+    <div id="tf-contact" class="text-center">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="section-title center">
+                        <h2>Feel free to <strong>contact us</strong></h2>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="clearfix"></div>
+                        <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>            
+                    </div>
+
+                    <form action="/form_submitted3/" method="POST">{% csrf_token %}
+                        <div class="row">
+						<div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Name</label>
+                                    <input type="text" class="form-control" name="pass" placeholder="What's your name?">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email id?">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Message</label>
+                            <textarea class="form-control" rows="3" name="mess"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn tf-btn btn-default">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav id="footer">
+        <div class="container">
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+        </div>
+    </nav>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script>
+
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+            <script>
+            // For Demo purposes only (show hover effect on mobile devices)
+            [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+                el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+            } );
+        </script>
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script>
+        window.requestAnimFrame = (function(callback) {
+            return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function(callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        var requestId, jolttime;
+
+        var c = document.getElementById('canv');
+        var $ = c.getContext('2d');
+
+        var s = 18; //grid square size
+        var mv = 10; //moving areas
+        var sp = 1; //move speed
+        var clm = 23; //columns
+        var rw = 10; //rows
+        var x = []; //x array
+        var y = []; //y array
+        var X = []; //starting X array
+        var Y = []; //starting Y array
+
+        c.width  = c.offsetWidth;
+        c.height = c.offsetHeight;
+
+        for (var i = 0; i < clm * rw; i++) {
+            x[i] = ((i % clm) - 0.5) * s;
+            y[i] = (Math.floor(i / clm) - 0.5) * s;
+            X[i] = x[i];
+            Y[i] = y[i];
+        }
+        var t = 0;
+
+        function jolt() {
+            $.fillRect(0, 0, c.width, c.height);
+
+            for (var i = 0; i < clm * rw; i++) {
+                if (i % clm != clm - 1 && i < clm * (rw - 1) - 1) {
+                    $.fillStyle = "hsla(0,0,0,1)";
+                    $.strokeStyle = "#95D384";
+                    $.lineWidth = 1;
+                    $.beginPath();
+                    $.moveTo(x[i], y[i]);
+                    $.lineTo(x[i + 1], y[i + 1]);
+                    $.lineTo(x[i + clm + 1], y[i + clm + 1]);
+                    $.lineTo(x[i + clm], y[i + clm]);
+                    $.closePath();
+                    $.stroke();
+                    $.fill();
+                }
+            }
+            for (var i = 0; i < rw * clm; i++) {
+                if ((x[i] < X[i] + mv) && (x[i] > X[i] - mv) && (y[i] < Y[i] + mv) && (y[i] > Y[i] - mv)) {
+                    x[i] = x[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+                    y[i] = y[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+                } else if (x[i] >= X[i] + mv) {
+                    x[i] = x[i] - sp;
+                } else if (x[i] <= X[i] - mv) {
+                    x[i] = x[i] + sp;
+                } else if (y[i] >= Y[i] + mv) {
+                    y[i] = y[i] - sp;
+                } else if (y[i] <= Y[i] + mv) {
+                    y[i] = y[i] + sp;
+                }
+            }
+            //controls time of electric shake> when counter equals 0, it will reset for 5s then start again.
+            if (t % c.width == 0) {
+                jolttime = setTimeout('jolt()', 5);
+                t++;
+            } else {
+                jolttime = setTimeout('jolt()', 5);
+                t++;
+            }
+        }
+
+        function start() {
+            if (!requestId) {
+                requestId = window.requestAnimFrame(jolt);
+            }
+        }
+
+        function stop() {
+            if (requestId) {
+                clearTimeout(jolttime);
+                window.cancelAnimationFrame(requestId);
+                requestId = undefined;
+            }
+        }
+
+        document.querySelector('a.link--asiri').addEventListener('mouseenter', start);
+        document.querySelector('a.link--asiri').addEventListener('mouseleave', stop);
+    </script>
+  </body>
+</html>
