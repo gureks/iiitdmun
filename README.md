@@ -1,4 +1,4 @@
 #iiitd mun website
-Front end-@snehasi
-Back end-@snehalgupta
+Front end-@snehasi,
+Back end-@snehalgupta,
 Edits-@gureks
