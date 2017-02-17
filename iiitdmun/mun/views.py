@@ -26,7 +26,7 @@ def ipformsubmit(request):
         link2=request.POST.get("comments","")
         link3=request.POST.get("affiliations1","")
         file=open("ipforms","a")
-        file.write(" Name: "+fname+" "+lname+" \n Email: "+email+" \n Phone: "+phone+" \n Applying for: "+city+" \n Links to your work : "+link1+" \n Link to your samplework : "+link2+" \n Previous experiences: "+link3+"\n"+"\n"+"\n")
+        file.write(""+fname+" "+lname+","+email+","+phone+","+city+","+link1+","+link2+","+link3+"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def indisubmit(request):
