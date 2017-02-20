@@ -1,3 +1,6 @@
+iiitdmun/iiitdmun/__pycache__/
+iiitdmun/mun/__pycache__/
+diff.out
 # Byte-compiled / optimized / DLL files
 */__pycache__/
 *.py[cod]
