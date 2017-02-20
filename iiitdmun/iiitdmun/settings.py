@@ -25,7 +25,7 @@ SECRET_KEY = '78x9o4w*ojdyw13n1z(_^c9l46+o4e)eoh55lo*)25z$+l4!94'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['198.168.1.104', 'localhost', '127.0.0.1', '0.0.0.0', 'mun.iiitd.edu.in']
 
 
 # Application definition
