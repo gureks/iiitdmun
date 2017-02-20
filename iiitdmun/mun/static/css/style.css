@@ -523,6 +523,16 @@ button.btn.tf-btn.btn-default {
 	text-transform: uppercase;
 }
 
+a.btn.tf-btn.btn-default {
+	float: right;
+	background: #646BC1;
+	border: 0;
+	border-radius: 0;
+	padding: 10px 40px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
 .btn:active, .btn.active {
 	background-image: none;
 	outline: 0;

@@ -5,72 +5,81 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Registrations</title>
+		<title>Delegate Application | IIIT-Delhi MUN 2017</title>
 		
-		<meta name="author" content="@croft_lara,@pro_gupta" />
+		<meta name="author" content="@snehasi,@snehalgupta,@gureks" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="{% static 'forms/css/default.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'forms/css/component.css' %}" />
+		<link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
+
 		<script src="{% static 'forms/js/modernizr.custom.js' %}"></script>
 	</head>
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span><h1>Individual Delegations</h1><span class="bp-icon bp-icon-about" data-content="More info about form."></span></span>
-				<h3>Registration Form </h3>
-				<nav>
-					<a href="/collegedelegation/" class="bp-icon bp-icon-prev" data-info="College Delegation"><span>College Delegation</span></a>
-					<a href="/ip/" class="bp-icon bp-icon-next" data-info="IP"><span>IP</span></a>
-					<a href="/individualdelegation/" class="bp-icon bp-icon-prev" data-info="Individual Delegation"><span>Individual Delegation</span></a>
-					<a href="/" class="bp-icon bp-icon-prev" data-info="IIITD MUN"><span>Home Page</span></a>
-				</nav>
+				<span><h1>Individual Delegate Application</h1></span>
+<!-- 				<h3>Registration Form </h3>
+ -->				
+ 				<div class="row">
+					<div class="col-md-4 col-sm-8">
+						<a href="/ip/" class="btn tf-btn btn-default btn-block">Press Applications</a><br><br><br>
+					</div>
+					<div class="col-md-4 col-sm-8">
+						<a href="/delegation/" class="btn tf-btn btn-default btn-block">Delegation Applications</a><br><br><br>
+					</div>
+					<div class="col-md-4 col-sm-8">
+						<a href="/" class="btn tf-btn btn-default btn-block">Homepage</a><br><br><br>
+					</div>
+				</div>
 			</header>	
 			<div class="main">
 				<form class="cbp-mc-form" action="/form_submitted1/" method="POST">{% csrf_token %}
 					<div class="cbp-mc-column">
 						<label for="first_name">First Name</label>
-	  					<input type="text" id="first_name" name="first_name" placeholder="Ban Ki">
+	  					<input type="text" id="first_name" name="first_name" placeholder="Justin">
 
 	  					<label for="last_name">Last Name</label>
-	  					<input type="text" id="last_name" name="last_name" placeholder="Moon">
+	  					<input type="text" id="last_name" name="last_name" placeholder="Trudeau">
 
 	  					<label for="email">Email Address</label>
-	  					<input type="text" id="email" name="email" placeholder="moon@iiitd.ac.im">
+	  					<input type="text" id="email" name="email" placeholder="mun@iiitd.ac.in">
 
 	  					<label for="phone">Phone Number</label>
-	  					<input type="text" id="phone" name="phone" placeholder="9865236985">
+	  					<input type="text" id="phone" name="phone" placeholder="+91-9910004979">
+						
+						<label for="college">School/College/Institution</label>
+	  					<input type="text" id="college" name="college" placeholder="IIIT-Delhi">
 
-
-
-	  					
-	  					
-	  					
 	  				</div>
 	  				<div class="cbp-mc-column">
-					<label for="country">Committees allotment preferences.</label>
-	  					<select id="country" name="city">
-	  						<option>Choose your preference</option>
-	  						<option>Ph1</option>
-	  						<option>R2</option>
-	  						<option>r3</option>
-	  					</select>
-
 	  				
-	  					<label for="affiliations">Links to your work.</label>
-	  					<textarea id="affiliations" name="affiliations"></textarea>
+	  					<label for="experience">Previous MUN Experience</label>
+	  					<textarea id="experience" name="experience" placeholder="Format: MUN - Position or Country - Committee - Prize Won"></textarea>
 	  
-	  					<label for="comments">Links to your sample work on topic "XYZ"</label>
-	  					<textarea id="comments" name="comments"></textarea>	
-	  					</div>
+	  					<label for="pref1">Committee and Portfolio Preference 1</label>
+	  					<textarea id="pref1" name="pref1"></textarea>	
+	  				</div>
 	  				<div class="cbp-mc-column">
-	  					<label for="affiliations">Previous Experiences.</label>
-	  					<textarea id="affiliations" name="affiliations1"></textarea><br><br><br>
-	  					<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Send your data" /></div>
-	</div>	
+	  					<label for="pref2">Committee and Portfolio Preference 2</label>
+	  					<textarea id="pref2" name="pref2"></textarea>	
+	  				
+	  					<label for="pref3">Committee and Portfolio Preference 3</label>
+	  					<textarea id="pref3" name="pref3"></textarea>	
+	  				
+	  					<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Submit" /></div>
+					</div>	
 						
 	  			
 				</form>
 			</div>
 		</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
 	</body>
 </html>
