@@ -11,7 +11,7 @@ def register(request):
 def collegedelegation(request):
     return render(request,'forms/school.html',{})
 def ip(request):
-    return render(request,'forms/index.html',{})
+    return render(request,'forms/ip.html',{})
 def individualdelegation(request):
     return render(request,'forms/individual.html',{})
 #Forms follow here
@@ -24,7 +24,7 @@ def ipformsubmit(request):
         city=request.POST.get("city","")
         link1=request.POST.get("affiliations","")
         link2=request.POST.get("comments","")
-        link3=request.POST.get("affiliations1","")
+        link3=request.POST.get("experience","")
         file=open("ipforms","a")
         file.write(""+fname+" "+lname+","+email+","+phone+","+city+","+link1+","+link2+","+link3+"\n")
         file.close()
