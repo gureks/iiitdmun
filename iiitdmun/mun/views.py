@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from hashlib import md5
 import os
 from django.views.static import serve
 
@@ -15,6 +14,7 @@ def ip(request):
     return render(request,'forms/index.html',{})
 def individualdelegation(request):
     return render(request,'forms/individual.html',{})
+#Forms follow here
 def ipformsubmit(request):
     if request.method == "POST":
         fname=request.POST.get("first_name","")
@@ -53,18 +53,20 @@ def collsubmit(request):
         link3=request.POST.get("affiliations3","")
         link4=request.POST.get("comments1","")
         link5=request.POST.get("affiliations4","")
-        link6=request.POST.get("comments2","")
+        link6=request.POST.get("affiliations5","")
+        link7=request.POST.get("comments2","")
         fname1=request.POST.get("first_name1","")
         fname2=request.POST.get("first_name2","")
         fname3=request.POST.get("first_name3","")
         fname4=request.POST.get("first_name4","")
         fname5=request.POST.get("first_name5","")
         fname6=request.POST.get("first_name6","")
+        fname7=request.POST.get("first_name7","")
         lname1=request.POST.get("last_name1","")
         email=request.POST.get("email","")
         phone1=request.POST.get("phone1","")
         file=open("collforms","a")
-        file.write(""+fname+","+lname+","+phone+","+link1+","+link2+","+link3+","+link4+","+link5+","+link6+","+fname1+","+fname2+","+fname3+","+fname4+","+fname5+","+fname6+" "+lname1+","+email+","+phone1+"\n")
+        file.write(""+fname+","+lname+","+phone+","+link1+","+link2+","+link3+","+link4+","+link5+","+link6+","+link7+","+fname1+","+fname2+","+fname3+","+fname4+","+fname5+","+fname6+","+fname7+" "+lname1+","+email+","+phone1+"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def consubmit(request):
@@ -76,6 +78,6 @@ def consubmit(request):
         file.write(""+email+","+passw+","+mess+"\n") 
         file.close()
         return HttpResponseRedirect("../../")
-        
+#successful submission        
 def success(request):
     return render(request,'forms/formsubmitted.html',{})

@@ -2,10 +2,10 @@ from django.conf.urls import url
 from . import views
 urlpatterns = [
     url(r'^$',views.index,name='index'),
-    url(r'^register/$',views.register,name='register'),
-    url(r'^delegation/$',views.collegedelegation,name='register'),
+    # url(r'^register/$',views.register,name='register'),
+    url(r'^delegation/$',views.collegedelegation,name='delegation'),
     url(r'^ip/$',views.ip,name='ip'),
-    url(r'^delegate/$',views.individualdelegation,name='individualdelegation'),
+    url(r'^delegate/$',views.individualdelegation,name='delegate'),
     url(r'^form_submitted/$',views.ipformsubmit,name='form_submitted'),
     url(r'^form_submitted1/$',views.indisubmit,name='form_submitted1'),
     url(r'^form_submitted2/$',views.collsubmit,name='form_submitted2'),
