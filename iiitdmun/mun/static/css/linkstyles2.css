@@ -5,7 +5,7 @@
 	position: relative;
 	font-size: 4em;
 	line-height: 1;
-	color: #f9b32f;
+	color: #646BC1;
 	display: inline-block;
 }
 
@@ -32,7 +32,7 @@
 	position: absolute;
 	border-width: 4px 0;
 	border-style: solid;
-	border-color: #f9b32f;
+	border-color: #646BC1;
 	pointer-events: none;
 	-webkit-transform: scale3d(0,1,1);
 	transform: scale3d(0,1,1);
