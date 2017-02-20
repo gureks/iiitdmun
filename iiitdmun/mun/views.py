@@ -40,7 +40,7 @@ def indisubmit(request):
         link2=request.POST.get("comments","")
         link3=request.POST.get("affiliations1","")
         file=open("indiforms","a")
-        file.write(" Name: "+fname+" "+lname+" \n Email: "+email+" \n Phone: "+phone+" \n Committees allotment preferences: "+city+" \n Links to your work : "+link1+" \n Link to your samplework : "+link2+" \n Previous experiences: "+link3+"\n"+"\n"+"\n")
+        file.write(""+fname+" "+lname+","+email+","+phone+","+city+","+link1+","+link2+","+link3+"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def collsubmit(request):
@@ -64,7 +64,7 @@ def collsubmit(request):
         email=request.POST.get("email","")
         phone1=request.POST.get("phone1","")
         file=open("collforms","a")
-        file.write(" Name of Institution : "+fname+" \n Address: "+lname+" \n Phone: "+phone+" \n Allotment Preferences for GA:ESS: "+link1+" \n Allotment Preferences for SPECPOL: "+link2+" \n Allotment Preferences for NSC: "+link3+" \n Allotment Preferences for UNSC: "+link4+" \n Allotment Preferences for WIPO: "+link5+" \n Details of delegates: "+link6+" \n GA ESS: "+fname1+" \n SPECPOL: "+fname2+" \n NSC: "+fname3+" \n UNSC: "+fname4+" \n WIPO: "+fname5+" \n Name of Head: "+fname6+" "+lname1+" \n Email: "+email+" \n Phone: "+phone1+"\n"+"\n"+"\n")
+        file.write(""+fname+","+lname+","+phone+","+link1+","+link2+","+link3+","+link4+","+link5+","+link6+","+fname1+","+fname2+","+fname3+","+fname4+","+fname5+","+fname6+" "+lname1+","+email+","+phone1+"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def consubmit(request):
@@ -73,16 +73,9 @@ def consubmit(request):
         passw=request.POST.get("pass","")
         mess=request.POST.get("mess","")
         file=open("conforms","a")
-        file.write(" Email: "+email+" \n Password: "+passw+" \n Message: "+mess+"\n \n \n") 
+        file.write(""+email+","+passw+","+mess+"\n") 
         file.close()
         return HttpResponseRedirect("../../")
         
 def success(request):
     return render(request,'forms/formsubmitted.html',{})
-        
-        
-        
-        
-        
-        
-        
