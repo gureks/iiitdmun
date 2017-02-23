@@ -26,7 +26,7 @@ def ipformsubmit(request):
         link2=request.POST.get("comments","")
         link3=request.POST.get("experience","")
         file=open("ipforms","a")
-        file.write(""+fname+" "+lname+","+email+","+phone+","+city+","+link1+","+link2+","+link3+"\n")
+        file.write("\""+str(fname)+" "+str(lname)+"\",\""+str(email)+"\",\""+str(phone)+"\",\""+str(city)+"\",\""+str(link1)+"\",\""+str(link2)+"\",\""+str(link3)+"\"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def indisubmit(request):
@@ -41,7 +41,7 @@ def indisubmit(request):
         pref2=request.POST.get("pref2","")
         pref3=request.POST.get("pref3","")
         file=open("indiforms","a")
-        file.write(""+fname+" "+lname+","+email+","+phone+","+college+","+experience+","+pref1+","+pref2+","+pref3+"\n")
+        file.write("\""+str(fname)+" "+str(lname)+"\",\""+str(email)+"\",\""+str(phone)+"\",\""+str(college)+"\",\""+str(experience)+"\",\""+str(pref1)+"\",\""+str(pref2)+"\",\""+str(pref3)+"\"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def collsubmit(request):
@@ -67,7 +67,7 @@ def collsubmit(request):
         email=request.POST.get("email","")
         phone1=request.POST.get("phone1","")
         file=open("collforms","a")
-        file.write(""+fname+","+lname+","+phone+","+link1+","+link2+","+link3+","+link4+","+link5+","+link6+","+link7+","+fname1+","+fname2+","+fname3+","+fname4+","+fname5+","+fname6+","+fname7+" "+lname1+","+email+","+phone1+"\n")
+        file.write("\""+str(fname)+"\",\""+str(lname)+"\",\""+str(phone)+"\",\""+str(link1)+"\",\""+str(link2)+"\",\""+str(link3)+"\",\""+str(link4)+"\",\""+str(link5)+"\",\""+str(link6)+"\",\""+str(link7)+"\",\""+str(fname1)+"\",\""+str(fname2)+"\",\""+str(fname3)+"\",\""+str(fname4)+"\",\""+str(fname5)+"\",\""+str(fname6)+"\",\""+str(fname7)+" "+str(lname1)+"\",\""+str(email)+"\",\""+str(phone1)+"\"\n")
         file.close()
         return HttpResponseRedirect("../success/")
 def consubmit(request):
@@ -76,7 +76,7 @@ def consubmit(request):
         passw=request.POST.get("pass","")
         mess=request.POST.get("mess","")
         file=open("conforms","a")
-        file.write(""+email+","+passw+","+mess+"\n") 
+        file.write("\""+str(email)+"\",\""+str(passw)+"\",\""+str(mess)+"\"\n") 
         file.close()
         return HttpResponseRedirect("../../")
 #successful submission        
