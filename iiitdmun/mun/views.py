@@ -14,6 +14,8 @@ def ip(request):
     return render(request,'forms/ip.html',{})
 def individualdelegation(request):
     return render(request,'forms/individual.html',{})
+def team2(request):
+    return render(request,'team.html',{})
 #Forms follow here
 def ipformsubmit(request):
     if request.method == "POST":
